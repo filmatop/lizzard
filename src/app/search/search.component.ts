@@ -3,10 +3,7 @@ import { SearchBarService } from '../search-bar.service';
 
 @Component({
   selector: 'app-search',
-  template: `
-    <input (keyup)="onKey($event)" placeholder="Search..." id="search-bar">
-    <p style="color:white">{{value}}</p>
-  `,
+  templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
@@ -18,8 +15,8 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  onKey(event: any) {
-    this.value = event.target.value;
+  onKey(value: string) {
+    this.value = value;
     this.searchBarService.updateValue(this.value);
   }
 }
