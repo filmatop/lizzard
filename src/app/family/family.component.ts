@@ -12,4 +12,8 @@ export class FamilyComponent implements OnInit {
   ngOnInit() {
   }
 
+  getSpecies(): void {
+
+  }
+
 }
