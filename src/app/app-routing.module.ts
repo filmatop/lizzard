@@ -15,8 +15,6 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'family/:name', component: SpeciesComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'family/:name', component: FamilyComponent },
-  { path: 'contact', component: ContactComponent },
   { path: 'test', component: FilipTestComponent }
 ];
 

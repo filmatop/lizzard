@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {SpeciesService} from '../species.service';
 import {FamilyService} from '../family.service';
@@ -24,6 +24,7 @@ export class SpeciesComponent implements OnInit {
   }
 
   getSpeciesFromFamily(): void {
+    console.log('hejjej');
     const FAMILY_NAME = this.route.snapshot.paramMap.get('name');
     const family = this.familyService.findFamily(FAMILIES, FAMILY_NAME);
     this.speciesService.getSpecies(family)

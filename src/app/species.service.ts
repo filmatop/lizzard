@@ -15,9 +15,16 @@ export class SpeciesService {
   ) { }
 
   public getSpecies(family: Family): Observable<Species[]> {
-    const speciesList: Species[] = [];
-    speciesList.push(this.speciesDb.getSpecies().find(species => species.family === family));
-    //speciesList.push(this.speciesDb.getSpecies().filter());
-    return of(speciesList);
+    const speciesList: Species[] = this.speciesDb.getSpecies(); // holds all species
+
+    const filteredSpeciesList = speciesList.filter(function (species) {  // get species from a specific family
+      return species.family === family;
+    });
+
+    return of(filteredSpeciesList);
+  }
+
+  private hasFamily(species: Species, family: Family) {
+    return (species.family === family);
   }
 }

@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SpeciesComponent } from './species/species.component';
 import { SearchComponent } from './search/search.component';
 import { FilipTestComponent } from './filip-test/filip-test.component';
+import { BasicDropdownComponent } from './basic-dropdown/basic-dropdown.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FilipTestComponent } from './filip-test/filip-test.component';
     ContactComponent,
     SpeciesComponent,
     SearchComponent,
-    FilipTestComponent
+    FilipTestComponent,
+    BasicDropdownComponent
   ],
   imports: [
     BrowserModule,
