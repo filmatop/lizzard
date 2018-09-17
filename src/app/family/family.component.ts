@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Family} from '../family';
+import {FamilyService} from '../family.service';
 
 @Component({
   selector: 'app-family',
@@ -7,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FamilyComponent implements OnInit {
 
-  constructor() { }
+  families: Family[];
+
+  constructor(
+    private familyService: FamilyService
+  ) { }
 
   ngOnInit() {
   }
 
-  getSpecies(): void {
 
+  getFamilies(): void {
+    this.familyService.getFamilies().subscribe(families => this.families = families);
   }
 
 }
