@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  sliderValue = 0;
+  constant = 6;
+  img;
+  slider;
+
+  constructor() {
+    this.slider = null;
+  }
 
   ngOnInit() {
+    this.slider = <HTMLInputElement> document.getElementById('mySlider');
+    this.sliderValue = this.slider.value;
+    this.img = document.getElementById('lizardImage');
+  }
+
+  onSliderInput() {
+    this.img.style.width = (this.slider.value * this.constant).toString() + 'px';
   }
 
 }

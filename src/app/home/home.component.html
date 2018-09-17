@@ -1,7 +1,11 @@
 <p>
-  home works!
+  Welcome to the Lizard homepage. 
 </p>
 
+<div class="slidecontainer">
+  <input type="range" name = "hejSlider" id="mySlider" value="50" min="1" max="200"  class="slider" (input)="onSliderInput()"/>
+  {{ sliderValue }}
+</div>
 <p>
-  <img width="600" alt="Lizard image" src="assets/images/komodo1.jpg">
+  <img width="600" alt="Lizard image" src="assets/images/komodo1.jpg" id="lizardImage">
 </p>
