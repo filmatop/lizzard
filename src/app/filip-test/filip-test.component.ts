@@ -12,8 +12,14 @@ export class FilipTestComponent implements OnInit {
   constructor(private searchBarService: SearchBarService) {
   }
 
+  clickCount = 0;
+
   ngOnInit() {
     this.searchBarService.getValue().subscribe(value => this.value = value);
+  }
+
+  increaseCounter() {
+    this.clickCount++;
   }
 
 
