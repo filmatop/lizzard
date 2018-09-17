@@ -1,0 +1,4 @@
+<!--<input (keyup)="onKey($event)" placeholder="Search..." id="search-bar">-->
+<input #box (keyup)="onKey(box.value)" placeholder="Search..." id = "search-bar"/>
+<p style="color:white">{{value}}</p>
+

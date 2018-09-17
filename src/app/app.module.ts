@@ -8,6 +8,8 @@ import { FaqComponent } from './faq/faq.component';
 import { FamilyComponent } from './family/family.component';
 import { ContactComponent } from './contact/contact.component';
 import { SpeciesComponent } from './species/species.component';
+import { SearchComponent } from './search/search.component';
+import { FilipTestComponent } from './filip-test/filip-test.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SpeciesComponent } from './species/species.component';
     FaqComponent,
     FamilyComponent,
     ContactComponent,
-    SpeciesComponent
+    SpeciesComponent,
+    SearchComponent,
+    FilipTestComponent
   ],
   imports: [
     BrowserModule,
