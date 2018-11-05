@@ -1,0 +1,42 @@
+<form [formGroup]="myForm">
+
+  <!-- name -->
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    <!--display error message if name is not valid-->
+    <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+      Name is required (minimum 5 characters).
+    </small>
+  </div>
+
+  <br>
+
+  <!-- list of addresses -->
+  <div formArrayName="addresses">
+    <div *ngFor="let address of formAddresses.controls; let i=index">
+      <br>
+      <div>
+        <span>Address {{i + 1}}</span>
+        <span *ngIf="formAddresses.controls.length > 1"
+              (click)="removeAddress(i)">
+        </span>
+      </div>
+
+      <!-- Angular assigns array index as group name by default 0, 1, 2, ... -->
+      <div [formGroupName]="i">
+        <app-address [addressForm]="formAddresses.controls[i]"></app-address>
+
+      </div>
+
+      <button (click)="removeAddress(i)">Remove address</button>
+
+    </div>
+  </div>
+
+  <br>
+  <button (click)="addAddress()">Add address</button>
+
+  <br><br>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>

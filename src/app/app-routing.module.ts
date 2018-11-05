@@ -8,6 +8,7 @@ import { FamilyComponent } from './family/family.component';
 import { ContactComponent } from './contact/contact.component';
 import {SpeciesComponent} from './species/species.component';
 import {FilipTestComponent} from './filip-test/filip-test.component';
+import {AddressListComponent} from './address-list/address-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'family/:name', component: SpeciesComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'test', component: FilipTestComponent }
+  { path: 'test', component: FilipTestComponent },
+  { path: 'address', component: AddressListComponent }
 ];
 
 @NgModule({

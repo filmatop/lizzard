@@ -11,6 +11,9 @@ import { SpeciesComponent } from './species/species.component';
 import { SearchComponent } from './search/search.component';
 import { FilipTestComponent } from './filip-test/filip-test.component';
 import { BasicDropdownComponent } from './basic-dropdown/basic-dropdown.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AddressComponent } from './address/address.component';
+import { AddressListComponent } from './address-list/address-list.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,15 @@ import { BasicDropdownComponent } from './basic-dropdown/basic-dropdown.componen
     SpeciesComponent,
     SearchComponent,
     FilipTestComponent,
-    BasicDropdownComponent
+    BasicDropdownComponent,
+    AddressComponent,
+    AddressListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
